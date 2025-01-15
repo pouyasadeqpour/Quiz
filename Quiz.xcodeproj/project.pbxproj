@@ -13,6 +13,10 @@
 		F01E8A0D2D37033C00F0F016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01E8A0B2D37033C00F0F016 /* Main.storyboard */; };
 		F01E8A0F2D37033E00F0F016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F01E8A0E2D37033E00F0F016 /* Assets.xcassets */; };
 		F01E8A122D37033E00F0F016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01E8A102D37033E00F0F016 /* LaunchScreen.storyboard */; };
+		F01E8A1D2D370C0900F0F016 /* Lalezar-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F01E8A1C2D370C0900F0F016 /* Lalezar-Regular.ttf */; };
+		F04B25F02D3838CA0062D82F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B25EF2D3838CA0062D82F /* Question.swift */; };
+		F04B25F22D3839400062D82F /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B25F12D3839400062D82F /* Quiz.swift */; };
+		F056DB032D37DBBF00C8BC70 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB022D37DBBF00C8BC70 /* AnswerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		F01E8A0E2D37033E00F0F016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F01E8A112D37033E00F0F016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F01E8A132D37033E00F0F016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F01E8A1C2D370C0900F0F016 /* Lalezar-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lalezar-Regular.ttf"; sourceTree = "<group>"; };
+		F04B25EF2D3838CA0062D82F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		F04B25F12D3839400062D82F /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		F056DB022D37DBBF00C8BC70 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		F01E8A042D37033C00F0F016 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				F01E8A1C2D370C0900F0F016 /* Lalezar-Regular.ttf */,
+				F01E8A192D3703D000F0F016 /* Model */,
+				F01E8A1A2D3703D900F0F016 /* View */,
+				F01E8A1B2D3703DE00F0F016 /* Controller */,
 				F01E8A052D37033C00F0F016 /* AppDelegate.swift */,
 				F01E8A072D37033C00F0F016 /* SceneDelegate.swift */,
-				F01E8A092D37033C00F0F016 /* ViewController.swift */,
-				F01E8A0B2D37033C00F0F016 /* Main.storyboard */,
 				F01E8A0E2D37033E00F0F016 /* Assets.xcassets */,
 				F01E8A102D37033E00F0F016 /* LaunchScreen.storyboard */,
 				F01E8A132D37033E00F0F016 /* Info.plist */,
 			);
 			path = Quiz;
+			sourceTree = "<group>";
+		};
+		F01E8A192D3703D000F0F016 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F04B25EF2D3838CA0062D82F /* Question.swift */,
+				F04B25F12D3839400062D82F /* Quiz.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F01E8A1A2D3703D900F0F016 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F056DB042D37DC0C00C8BC70 /* Button */,
+				F01E8A0B2D37033C00F0F016 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F01E8A1B2D3703DE00F0F016 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F01E8A092D37033C00F0F016 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F056DB042D37DC0C00C8BC70 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				F056DB022D37DBBF00C8BC70 /* AnswerButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F01E8A122D37033E00F0F016 /* LaunchScreen.storyboard in Resources */,
+				F01E8A1D2D370C0900F0F016 /* Lalezar-Regular.ttf in Resources */,
 				F01E8A0F2D37033E00F0F016 /* Assets.xcassets in Resources */,
 				F01E8A0D2D37033C00F0F016 /* Main.storyboard in Resources */,
 			);
@@ -138,7 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04B25F02D3838CA0062D82F /* Question.swift in Sources */,
 				F01E8A0A2D37033C00F0F016 /* ViewController.swift in Sources */,
+				F04B25F22D3839400062D82F /* Quiz.swift in Sources */,
+				F056DB032D37DBBF00C8BC70 /* AnswerButton.swift in Sources */,
 				F01E8A062D37033C00F0F016 /* AppDelegate.swift in Sources */,
 				F01E8A082D37033C00F0F016 /* SceneDelegate.swift in Sources */,
 			);

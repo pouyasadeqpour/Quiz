@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lalezar-Regular.ttf">
+            <string>Lalezar-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgrounddddd" translatesAutoresizingMaskIntoConstraints="NO" id="H2Y-xi-LZ1">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2g-UT-Opb">
+                                <rect key="frame" x="256.33333333333331" y="79" width="116.66666666666669" height="94.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Lalezar-Regular" family="Lalezar" pointSize="60"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="متن سوال" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="eRT-el-hfb">
+                                <rect key="frame" x="10" y="193.33333333333334" width="373" height="424.66666666666663"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Lalezar-Regular" family="Lalezar" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="moN-ne-4kv">
+                                <rect key="frame" x="4" y="718" width="385" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCu-B5-k4o" customClass="AnswerButton" customModule="Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="100"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="غلط">
+                                            <fontDescription key="titleFontDescription" name="Lalezar-Regular" family="Lalezar" pointSize="45"/>
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JoZ-5p-TKz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtR-4C-DXS" customClass="AnswerButton" customModule="Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="195" y="0.0" width="190" height="100"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="صحیح">
+                                            <fontDescription key="titleFontDescription" name="Lalezar-Regular" family="Lalezar" pointSize="45"/>
+                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6fW-0K-o6M"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="hlQ-M4-E15"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H2Y-xi-LZ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0MM-uW-X7y"/>
+                            <constraint firstItem="moN-ne-4kv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="680-KC-pE6"/>
+                            <constraint firstAttribute="bottom" secondItem="H2Y-xi-LZ1" secondAttribute="bottom" id="86V-Aq-uZv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eRT-el-hfb" secondAttribute="bottom" constant="200" id="9BQ-fD-zgd"/>
+                            <constraint firstItem="moN-ne-4kv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GMo-6x-tYF"/>
+                            <constraint firstItem="H2Y-xi-LZ1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hpb-De-WVn"/>
+                            <constraint firstItem="eRT-el-hfb" firstAttribute="top" secondItem="S2g-UT-Opb" secondAttribute="bottom" constant="20" id="P2h-YL-cb2"/>
+                            <constraint firstItem="S2g-UT-Opb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gHf-1i-m9v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="moN-ne-4kv" secondAttribute="trailing" constant="4" id="lOV-y4-7gr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eRT-el-hfb" secondAttribute="trailing" constant="10" id="qGx-Yn-AmN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S2g-UT-Opb" secondAttribute="trailing" constant="20" id="ttQ-78-6gv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H2Y-xi-LZ1" secondAttribute="trailing" id="w16-kA-xzU"/>
+                            <constraint firstItem="eRT-el-hfb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ybM-pF-5aH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="questionText" destination="eRT-el-hfb" id="eLl-dm-mYU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="-2"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="VtR-4C-DXS">
+            <size key="intrinsicContentSize" width="126.66666666666667" height="91"/>
+        </designable>
+        <designable name="uCu-B5-k4o">
+            <size key="intrinsicContentSize" width="88" height="91"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="backgrounddddd" width="1920" height="1080"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
